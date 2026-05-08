@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page.home.title">الرئيسية - دليل فعاليات الجامعة الافتراضية</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/svuicon.jpg" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- يُفعَّل مع العربية فقط -->
+    <link id="rtl-css" rel="stylesheet" href="assets/css/rtl.css" disabled />
+</head>
+<body style="font-family: 'Cairo', sans-serif;">
+    <!-- رأس الصفحة: Navbar موحّدة -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+                    <i class="fas fa-calendar-days text-primary"></i>
+                    <span data-i18n="brand">دليل فعاليات الجامعة الافتراضية</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html" data-i18n="nav.home">الرئيسية</a></li>
+                        <li class="nav-item"><a class="nav-link" href="events.html" data-i18n="nav.events">الفعاليات</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="nav.about">حول</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="nav.contact">اتصل بنا</a></li>
+                    </ul>
+
+                    <div class="d-flex align-items-center gap-3 ms-auto">
+                        <!-- محوّل الثيم: قمر ↔ شمس -->
+                        <button id="themeToggle" class="btn btn-outline-secondary d-flex align-items-center" type="button"
+                            aria-label="Toggle theme">
+                            <i id="themeIcon" class="fa-regular fa-moon"></i>
+                        </button>
+
+                        <!-- الأعلام للتبديل بين اللغات -->
+                        <div class="d-flex align-items-center gap-2" id="language_switcher">
+                            <img src="assets/img/SY.jpg" alt="العربية" id="AR" width="34" height="22"
+                                class="rounded border" style="cursor:pointer" />
+                            <img src="assets/img/USA.jpg" alt="English" id="EN" width="34" height="22"
+                                class="rounded border" style="cursor:pointer" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-4">
+        <section class="mb-5">
+            <div id="featuredCarousel" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&h=400&fit=crop" class="d-block w-100" alt="Slide 1">
+                        <div class="carousel-caption p-3 rounded">
+                            <h5 data-i18n="home.featured.slide1.title">جلسات استشارية</h5>
+                            <p data-i18n="home.featured.slide1.desc">ورشات تفاعلية لسوق العمل.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=1200&h=400&fit=crop" class="d-block w-100" alt="Slide 2">
+                        <div class="carousel-caption p-3 rounded">
+                            <h5 data-i18n="home.featured.slide2.title">لقاء الخريجين</h5>
+                            <p data-i18n="home.featured.slide2.desc">تبادل الخبرات بين الأجيال.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&h=400&fit=crop" class="d-block w-100" alt="Slide 3">
+                        <div class="carousel-caption p-3 rounded">
+                            <h5 data-i18n="home.featured.slide3.title">ملتقى الطلاب</h5>
+                            <p data-i18n="home.featured.slide3.desc">تعرف على نظام الجامعة الجديد.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </section>
+
+        <section class="mb-5 text-center">
+            <h3 class="mb-4" data-i18n="home.categories.title">تصنيفات الفعاليات</h3>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <button class="btn btn-outline-primary rounded-pill"><i class="fas fa-book-open me-1"></i> <span data-i18n="cat.culture">ثقافة</span></button>
+                <button class="btn btn-outline-success rounded-pill"><i class="fas fa-dumbbell me-1"></i> <span data-i18n="cat.sport">رياضة</span></button>
+                <button class="btn btn-outline-warning rounded-pill"><i class="fas fa-music me-1"></i> <span data-i18n="cat.music">موسيقى</span></button>
+                <button class="btn btn-outline-info rounded-pill"><i class="fas fa-users me-1"></i> <span data-i18n="cat.family">عائلي</span></button>
+            </div>
+        </section>
+
+        <section class="section p-4 rounded shadow-sm mb-5">
+            <h3 class="h4 mb-4 text-primary text-center">أعضاء الفريق</h3>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>الاسم</th>
+                            <th>ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>لواحظ شبيب</td><td>lawahiz_253044</td></tr>
+                        <tr><td>حسين شقيرة</td><td>Hussein_156978</td></tr>
+                        <tr><td>رغد الحلو</td><td>raghad_197037</td></tr>
+                        <tr><td>نور الكور</td><td>nour_292630</td></tr>
+                        <tr><td>سيدرا شيباني</td><td>sedra_266096</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- التذييل -->
+    <footer class="py-4 bg-body-tertiary border-top">
+        <div class="container small">
+            <p class="m-0"><span data-i18n="footer.copy">دليل فعاليات الجامعة الافتراضية - جميع الحقوق محفوظة ©</span></p>
+            <p class="m-0">
+                <i class="fas fa-envelope"></i>
+                <span data-i18n="footer.email">البريد الإلكتروني:</span>
+                <a href="mailto:EventsTeam@gmail.com">EventsTeam@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
